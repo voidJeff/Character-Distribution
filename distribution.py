@@ -40,4 +40,5 @@ import string
 
 line = input("Please enter a string of text (the bigger the better): ")
 print('The distribution of characters in "{0}" is: '.format(line))
-alphabet = str
+alphabet = string.ascii_lowercase
+print(line.count('a'))
