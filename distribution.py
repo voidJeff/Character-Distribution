@@ -38,7 +38,16 @@ Notice about this example:
 """
 import string
 
-line = input("Please enter a string of text (the bigger the better): ")
-print('The distribution of characters in "{0}" is: '.format(line))
+line_ = input("Please enter a string of text (the bigger the better): ")
+print('The distribution of characters in "{0}" is: '.format(line_))
+line = line_.lower()
 alphabet = string.ascii_lowercase
-print(line.count('a'))
+n = 1
+pick = lambda f: str(f)
+while n <= 26:
+    q = line.count("{0}".format(alphabet[n - 1]))
+    n += 1
+    if q != 0:
+        print(q)
+
+
