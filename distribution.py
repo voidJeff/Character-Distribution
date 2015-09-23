@@ -45,6 +45,7 @@ alphabet = string.ascii_lowercase
 n = 1
 lst = []
 qlst = []
+
 while n <= 26:
     q = line.count("{0}".format(alphabet[n - 1]))
     if q != 0:
@@ -53,25 +54,24 @@ while n <= 26:
     n += 1
 tupl = zip(lst,qlst)
 tup = list(tupl)
+tup1 = list(tupl)
 lnum = len(qlst)
 tup.sort(key=lambda x: x[1], reverse=True)
 llst = [x[0] for x in tup]
 qlst.sort()
-print(lst)
-print(qlst)
-print(lnum)
+
+
+print(tup1)
+print('')
 print(tup)
-print(llst)
 
 while lnum > 0:
     m = qlst[lnum - 1]
     while m > 0:
-        print(llst[-lnum])
+        print(llst[-lnum], end="")
         m -= 1
-    
+    print("")
     lnum -= 1
-print(len("Haha, "))
-    
 
         
 
