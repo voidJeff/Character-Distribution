@@ -1,7 +1,7 @@
 """
 distribution.py
 Author: Jeff
-Credit: None
+Credit: Google
 
 Assignment:
 
@@ -43,11 +43,21 @@ print('The distribution of characters in "{0}" is: '.format(line_))
 line = line_.lower()
 alphabet = string.ascii_lowercase
 n = 1
-pick = lambda f: str(f)
+lst = []
+qlst = []
 while n <= 26:
     q = line.count("{0}".format(alphabet[n - 1]))
-    n += 1
     if q != 0:
-        print(q)
+        lst.append(alphabet[n - 1])
+        qlst.append(q)
+    n += 1
+lnum = len(qlst)
+qlst.sort()
+print(qlst)
+print(lnum)
+    
+    
+
+        
 
 
