@@ -51,18 +51,21 @@ while n <= 26:
         lst.append(alphabet[n - 1])
         qlst.append(q)
     n += 1
+tupl = zip(lst,qlst)
 lnum = len(qlst)
 qlst.sort()
 print(lst)
 print(qlst)
 print(lnum)
+print(tupl)
 while lnum > 0:
     m = qlst[lnum - 1]
     while m > 0:
-        print(
+        print()
+        m -= 1
     
     lnum -= 1
-    
+print(len("Haha, "))
     
 
         
