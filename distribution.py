@@ -53,8 +53,15 @@ while n <= 26:
     n += 1
 lnum = len(qlst)
 qlst.sort()
+print(lst)
 print(qlst)
 print(lnum)
+while lnum > 0:
+    m = qlst[lnum - 1]
+    while m > 0:
+        print(
+    
+    lnum -= 1
     
     
 
