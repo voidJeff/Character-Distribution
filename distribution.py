@@ -36,3 +36,8 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+import string
+print('The distribution of characters in "{0}" is: '.format(line))
+line = input("Please enter a string of text (the bigger the better): ")
+
+alphabet = str
