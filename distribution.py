@@ -52,16 +52,21 @@ while n <= 26:
         qlst.append(q)
     n += 1
 tupl = zip(lst,qlst)
+tup = list(tupl)
 lnum = len(qlst)
+tup.sort(key=lambda x: x[1], reverse=True)
+llst = [x[0] for x in tup]
 qlst.sort()
 print(lst)
 print(qlst)
 print(lnum)
-print(tupl)
+print(tup)
+print(llst)
+
 while lnum > 0:
     m = qlst[lnum - 1]
     while m > 0:
-        print()
+        print(llst[-lnum])
         m -= 1
     
     lnum -= 1
