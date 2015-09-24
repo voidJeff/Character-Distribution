@@ -57,17 +57,12 @@ while n <= 26:
 tupl = zip(lst,qlst)
 tup = list(tupl)
 lnum = len(qlst)
-tup.sort(key=operator.itemgetter(1,0), reverse=True)
+tup.sort(key=lambda t: (-int(t[1]), t[0]))
 llst = [x[0] for x in tup]
 qlst.sort()
 
-
-
-print('')
-print(tup)
-
 while lnum > 0:
-    m = qlst[lnum - 1]
+    m = qlst[lnum-1]
     while m > 0:
         print(llst[-lnum], end="")
         m -= 1
