@@ -37,6 +37,7 @@ Notice about this example:
 * Letters that do not occur in the text are not listed in the output at all.
 """
 import string
+import operator
 
 line_ = input("Please enter a string of text (the bigger the better): ")
 print('The distribution of characters in "{0}" is: '.format(line_))
@@ -52,16 +53,17 @@ while n <= 26:
         lst.append(alphabet[n - 1])
         qlst.append(q)
     n += 1
+
 tupl = zip(lst,qlst)
 tup = list(tupl)
-tup1 = list(tupl)
 lnum = len(qlst)
-tup.sort(key=lambda x: x[1], reverse=True)
+tup.sort(key=operator.itemgetter(1,0))
+tup.sort(key=operator.itemgetter(1), reverse=True)
 llst = [x[0] for x in tup]
 qlst.sort()
 
 
-print(tup1)
+
 print('')
 print(tup)
 
