@@ -57,8 +57,9 @@ while n <= 26:
 tupl = zip(lst,qlst)
 tup = list(tupl)
 lnum = len(qlst)
-tup.sort(key=operator.itemgetter(1,0))
+tup.sort(key=operator.itemgetter(0), reverse=False)
 tup.sort(key=operator.itemgetter(1), reverse=True)
+
 llst = [x[0] for x in tup]
 qlst.sort()
 
